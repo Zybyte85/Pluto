@@ -1,11 +1,15 @@
 var modal = document.getElementById("newModal")
 
 function createButton(name, priority) {
+  if(name == "") {
+    var name = "New Task";
+  }
   console.log("Running createButton: " + name + " " + priority);
-    
+
   var button = document.createElement("button");
   button.innerText = name;
   button.className = "task-" + priority;
+  button.onclick = onTaskClick();
   document.getElementsByClassName(priority)[0].appendChild(button);
 }
 
@@ -22,4 +26,8 @@ window.onclick = function(event) {
   if (event.target == modal) {
     closeNewMenu();
   }
+}
+
+function onTaskClick() {
+  
 }
