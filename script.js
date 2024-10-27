@@ -9,7 +9,7 @@ function createButton(name, priority) {
   var button = document.createElement("button");
   button.innerText = name;
   button.className = "task-" + priority;
-  button.onclick = onTaskClick();
+  button.onclick = () => onTaskClick(button);
   document.getElementsByClassName(priority)[0].appendChild(button);
 }
 
@@ -28,6 +28,8 @@ window.onclick = function(event) {
   }
 }
 
-function onTaskClick() {
-  
+function onTaskClick(button) {
+  console.log("Task clicked", button);
+  button.classList.toggle('task-done');
+  document.getElementsByClassName("done")[0].appendChild(button);
 }

@@ -43,6 +43,12 @@ button:hover {
     margin-bottom: 10px; /* Gap between tasks */
 }
 
+/* Task done styles */
+.task-done {
+    background-color: #424446;
+    text-decoration: line-through;
+  }
+
 .add-button {
     background-color: #1c1e20;
     width: 60px;
@@ -64,6 +70,7 @@ input, select {
     width: 90%;
     height: 15%;
     margin-bottom: 5px;
+    font-size: large;
 }
 
 .modal {
