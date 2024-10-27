@@ -1,6 +1,6 @@
 # Pluto
 <p align="center">
-  <img src="logo/logo-128x128-transparent.png" />
+  <img src="assets/favicon.ico" />
 </p>
 
 ### _"It's better to planit than not to planit"_
