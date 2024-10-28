@@ -8,6 +8,7 @@
     <title>Pluto</title>
 </head>
 <body>
+    <button onclick="localStorage.setItem('taskData', null)">Clear all local storage</button>
     <div class="app"></div>
 
     <h2>High Priority</h2>
@@ -35,8 +36,9 @@
             <input name="due-date" id="newDueDate" type="date">
 
             <button id="newSubmit" class="submit-button" onclick=
-            "createButton(document.getElementById('newTask').value,
-            document.getElementById('newPriority').value);
+            "addTask(document.getElementById('newTask').value,
+            document.getElementById('newPriority').value, 
+            document.getElementById('newDueDate').value);
             closeNewMenu();">Submit</button>
             
         </div>
