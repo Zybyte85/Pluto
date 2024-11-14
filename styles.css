@@ -1,10 +1,16 @@
 /* Light theme colors */
 :root {
-    /* TODO: make light theme */
-
     --background-color: #ffffff;
     --text-color: #000000;
     --task-text-color: #000000;
+    --button-background: #C5D3E8;
+    --button-hover: #A6AEBF;
+    --add-button: #758694;
+    --modal-background: #B7B7B7;
+
+    --task-high: #91C483;
+    --task-medium: #F3C623;
+    --task-low: #FF8000;
   }
 /* Dark theme colors */
   [data-theme="dark"] {
@@ -23,7 +29,7 @@
 
 body {
     background-color: var(--background-color);
-    color: #D7DADC;
+    color: var(--text-color);
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
