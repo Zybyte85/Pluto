@@ -14,6 +14,9 @@ if(taskData == null) {
   }
 }
 
+// Make theme dark. Will change later for changing themes
+document.documentElement.setAttribute("data-theme", "dark");
+
 init(taskData)
 console.log(taskData);
 

@@ -1,6 +1,29 @@
+/* Light theme colors */
+:root {
+    /* TODO: make light theme */
+
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --task-text-color: #000000;
+  }
+/* Dark theme colors */
+  [data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #D7DADC;
+    --task-text-color: #000000;
+    --button-background: #202124;
+    --button-hover: #424446;
+    --add-button: #1E1E1E;
+    --modal-background: #353535;
+
+    --task-high: #20e361;
+    --task-medium: #ffe600;
+    --task-low: #e86541;
+  }
+
 body {
-    background-color: #292E32; /* Dark background */
-    color: #e0e0e0; /* Light text */
+    background-color: var(--background-color);
+    color: #D7DADC;
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 20px;
@@ -8,7 +31,7 @@ body {
 
 /* Task styles */
 .task-high, .task-medium, .task-low {
-    color: #000000;
+    color: var(--task-text-color);
     border: none;
     border-radius: 4px;
     padding:4px 4px;
@@ -16,27 +39,27 @@ body {
 }
 
 .task-high {
-    background-color: #20e361;
+    background-color: var(--task-high)
 }
 
 .task-medium {
-    background-color: #ffe600; 
+    background-color: var(--task-medium)
 }
 
 .task-low {
-    background-color: #e86541;
+    background-color: var(--task-low)
 }
 
 button {
-    background-color: #1c1e20;
-    color: #ffffff;
+    background-color: var(--button-background);
+    color: var(--text-color);
     border: none;
     border-radius: 4px;
     padding:4px 4px;
 }
 
 button:hover {
-  background-color: #424446;
+  background-color: var(--button-hover);
 }
 
 .task-high, .task-medium, .task-low {
@@ -45,12 +68,12 @@ button:hover {
 
 /* Task done styles */
 .task-done {
-    background-color: #424446;
+    background-color: var(--button-hover);
     text-decoration: line-through;
   }
 
 .add-button {
-    background-color: #1c1e20;
+    background-color: var(--add-button);
     width: 60px;
     height: 60px;
     border-radius: 10px;
@@ -63,8 +86,8 @@ button:hover {
 }
 
 input, select {
-    background-color: #424446;
-    color: #e0e0e0;
+    background-color: var(--button-background);
+    color: var(--text-color);
     border: none;
     border-radius: 4px;
     width: 90%;
@@ -86,7 +109,7 @@ input, select {
   
   /* Modal Content/Box */
 .modal-content {
-    background-color: #4d4d4d;
+    background-color: var(--modal-background);
     margin: 2% auto; /* 2% from the top and centered */
     padding: 20px;
     /*border: 1px solid #888; */
@@ -97,7 +120,7 @@ input, select {
   
 /* The Close Button */
 .close {
-    color: #aaaaaa;
+    color: var(--text-color);
     float: right;
     font-size: 28px;
     font-weight: bold;
