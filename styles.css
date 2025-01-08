@@ -1,27 +1,14 @@
-/* Light theme colors */
 :root {
-    --background-color: #ffffff;
-    --text-color: #000000;
-    --task-text-color: #000000;
-    --button-background: #C5D3E8;
-    --button-hover: #A6AEBF;
-    --add-button: #758694;
-    --modal-background: #B7B7B7;
+    color-scheme: light dark;
 
-    --task-high: #91C483;
-    --task-medium: #F3C623;
-    --task-low: #FF8000;
-  }
-/* Dark theme colors */
-  [data-theme="dark"] {
-    --background-color: #121212;
-    --text-color: #D7DADC;
+    --background-color: light-dark(#ffffff, #121212);
+    --text-color: light-dark(#000000, #D7DADC);
+    --button-background: light-dark(#C5D3E8, #202124);
+    --button-hover: light-dark(#A6AEBF, #424446);
+    --add-button: light-dark(#758694, #1E1E1E);
+    --modal-background: light-dark(#B7B7B7, #353535);
+    
     --task-text-color: #000000;
-    --button-background: #202124;
-    --button-hover: #424446;
-    --add-button: #1E1E1E;
-    --modal-background: #353535;
-
     --task-high: #20e361;
     --task-medium: #ffe600;
     --task-low: #e86541;
