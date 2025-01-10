@@ -125,6 +125,9 @@ input, select {
     cursor: pointer;
 }
 
-.submit-button {
+.submit-button,
+.mark-button {
     width: 90%;
+    margin-bottom: 5px;
 }
+
