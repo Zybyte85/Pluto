@@ -12,6 +12,7 @@
     --task-high: #20e361;
     --task-medium: #ffe600;
     --task-low: #e86541;
+    
   }
 
 div {
@@ -71,11 +72,18 @@ body {
 }
 
 .task-high {
-    background-color: var(--task-high)
+    background-color: var(--task-high);
+    
+}
+
+.task-high button {
+font-weight: 900px;
+
+
 }
 
 .task-medium {
-    background-color: var(--task-medium)
+    background-color: var(--task-medium);
 }
 
 .task-low {
@@ -88,10 +96,14 @@ button {
     border: none;
     border-radius: 4px;
     padding:4px 4px;
+    font-weight:bold;
+    transition: 0.3s ease;
 }
 
 button:hover {
   background-color: var(--button-hover);
+  transition:0.3s;
+  transform:scale(1.1)
 }
 
 .task-high, .task-medium, .task-low {
