@@ -18,14 +18,44 @@
 div {
  
  display:flex;
- gap:45px;
+
+
+}
+
+.wrap {
+width:100%;
+outline:solid black;
+
+
+
+
+
+
+}
+
+
+.buttonsWrap{
+    background-color: rgb(15, 13, 13); padding: 10px; border-radius: 10px; margin-top:auto;
+
+
+    
+}
+
+.buttonsWrap div {
+    flex-direction: column;
+
+
 
 }
 
 .wrap h2 { 
     background-color:rgb(15, 15, 15);
     border-radius: 10px;
-    padding:4px;
+    padding:10px;
+    width:calc(100% - 25px);
+    text-align: center;
+
+    
     
 
 
@@ -36,9 +66,10 @@ div {
 }
 
 
+
 body .container .wrap {
  background-color: rgb(45, 48, 48);
- 
+ transition: all 0.3s ease;
  width:200px;
  border-radius: 25px;
  text-align: center;
@@ -51,15 +82,35 @@ body .container .wrap {
 
 .container{
 flex-direction:row;
-
 margin-left:100px;
 margin-right:100px;
 justify-content: center;
+gap:15px;
+transform:all ease 0.3s;
 
 
 
 
 }
+
+@media (max-width: 600px) {
+   .container{
+    flex-direction: column;
+    margin:auto;
+    align-items: center;
+    transform:0.3s;
+
+
+
+
+   }
+
+   .wrap{
+    transform: translateY(30px);
+
+
+   }
+  }
 
 body {
     background-color: var(--background-color);
