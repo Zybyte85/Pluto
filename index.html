@@ -10,19 +10,36 @@
 <body>
     <button onclick="localStorage.setItem('taskData', null)">Clear all local storage</button>
     <div class="app"></div>
-
+    <div style="margin-left:auto; margin-right:auto;  text-align:center; width:fit-content; font-size:55px; font-weight: 900; margin-bottom:30px; ">Tasks</div>
+    <div class="container">
+    <div class="wrap" style="flex-direction: column;">
     <h2>High Priority</h2>
-    <div class="high" id="high"></div>
+    <div class="buttonsWrap">
+    <div  style="flex-direction: column;"  class="high" id="high"></div>
+</div>
+</div>
+<div  class="wrap"     style="flex-direction: column;">
     <h2>Medium Priority</h2>
+    <div class="buttonsWrap">
     <div class="medium" id="medium"></div>
+    </div>
+</div>
+<div   class="wrap"  style="flex-direction: column;">
     <h2>Low Priority</h2>
+    <div class="buttonsWrap">
     <div class="low" id="low"></div>
-    <h3>Done</h3>
+</div>
+</div>
+<div class="wrap" style="flex-direction: column;">
+    <h2>Done</h2>
+    <div class="buttonsWrap">
     <div class="done" id="done"></div>
-
+</div>
+</div>
+     </div>
     <button class="add-button" id="newBtn" onclick='openNewMenu()'>+</button>
 
-    <div id="newModal" class="modal">
+     <div id="newModal" class="modal">
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close", onclick="closeNewMenu()">&times;</span>
