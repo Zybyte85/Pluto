@@ -95,6 +95,7 @@ transform:all ease 0.3s;
     margin:auto;
     align-items: center;
     transform:0.3s;
+    gap:30px;
 
 
 
@@ -102,7 +103,7 @@ transform:all ease 0.3s;
    }
 
    .wrap{
-    transform: translateY(30px);
+    transform: translateY(5px);
 
 
    }
