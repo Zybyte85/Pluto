@@ -26,6 +26,7 @@ div {
     background-color:rgb(15, 15, 15);
     border-radius: 10px;
     padding:4px;
+    margin-top:0.5px;
     
 
 
@@ -98,9 +99,10 @@ button {
     color: var(--text-color);
     border: none;
     border-radius: 4px;
-    padding:4px 4px;
+    padding:4px;
     font-weight:bold;
     transition: 0.3s ease;
+    
 }
 
 button:hover {
@@ -212,3 +214,9 @@ input, select {
     font-style: normal;
   }
   
+  * {
+ font-family:'Roboto Bold'
+
+
+
+  }
