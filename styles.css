@@ -26,10 +26,15 @@ div {
     background-color:rgb(15, 15, 15);
     border-radius: 10px;
     padding:4px;
+    
+
+
+    
 
 
 
 }
+
 
 body .container .wrap {
  background-color: rgb(45, 48, 48);
@@ -37,7 +42,9 @@ body .container .wrap {
  width:200px;
  border-radius: 25px;
  text-align: center;
- padding:10px
+ padding:10px;
+    align-items: center;
+    
 
 
 }
