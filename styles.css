@@ -76,11 +76,7 @@ body {
     
 }
 
-.task-high button {
-font-weight: 900px;
 
-
-}
 
 .task-medium {
     background-color: var(--task-medium);
