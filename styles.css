@@ -25,6 +25,7 @@ div {
 .wrap {
 width:100%;
 outline:solid black;
+flex-direction: column;
 
 
 
