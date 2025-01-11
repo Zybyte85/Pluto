@@ -12,4 +12,4 @@ Pluto, is a simple, effective, and open source planning app that focuses on sing
 - [ ] Make the settings and calendar buttons work
 - [ ] Make a settings menu
 - [ ] Add a sidebar with a settings button, and explorer for different task lists
-- [ ] Switch to using an open source icon font (such as the Google material design icons)
+- [ ] Allow making new and renaming categories (maybe)
