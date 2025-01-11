@@ -48,9 +48,6 @@ function createButton(name, priority) {
 }
 
 function addTask(name, priority, dueDate) {
-  var name = document.getElementById('newTask').value;
-  var priority = document.getElementById('newPriority').value;
-  var dueDate = document.getElementById('newDueDate').value;
   console.log(taskData);
 
   taskData[priority].push({name: name, dueDate: dueDate});
