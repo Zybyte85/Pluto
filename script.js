@@ -1,6 +1,7 @@
 let taskData;
 
 taskData = JSON.parse(localStorage.getItem('taskData'));
+
 if(taskData == null) {
   taskData = {
     'high': [
@@ -17,7 +18,6 @@ if(taskData == null) {
 init(taskData)
 console.log(taskData);
 
-
 var modal = document.getElementById('newModal')
 
 function putInBrowserStorage() {
@@ -29,20 +29,25 @@ function init(taskData) {
   for(i in taskData) {
     for(j in taskData[i]) {
       console.log(taskData[i][j].name);
-      createButton(taskData[i][j].name, i);
+      createTaskButton(taskData[i][j].name, i);
     }
   }
 }
 
-function createButton(name, priority) {
+function createTaskButton(name, priority, dueDate) {
   if(name == '') {
     var name = 'New Task';
   }
-  console.log('Running createButton: ' + name + ' ' + priority);
+  console.log('Running createTaskButton: ' + name + ' ' + priority);
 
   var button = document.createElement('button');
   button.innerText = name;
   button.className = 'task-' + priority;
+
+  button.dataset.name = name;
+  button.dataset.priority = priority;
+  button.dataset.dueDate = dueDate;
+
   button.onclick = () => onTaskClick(button);
   document.getElementsByClassName(priority)[0].appendChild(button);
 }
@@ -53,7 +58,7 @@ function addTask(name, priority, dueDate) {
   taskData[priority].push({name: name, dueDate: dueDate});
 
   putInBrowserStorage();
-  createButton(name, priority);
+  createTaskButton(name, priority, dueDate);
 }
 
 function openNewMenu() {
@@ -99,11 +104,14 @@ function toggleTaskDone(button) {
   }
   else {
 /* Get the priortiy of the button and move it back to the div if it is already marked done */
-    document.getElementsByClassName(button.classList[0].split('-')[1])[0].appendChild(button);
+    document.getElementsByClassName(button.dataset.priority)[0].appendChild(button);
   }
 }
 
 function onTaskClick(button) {
   console.log('Task clicked', button);
+
+  console.log(`Name: ${button.dataset.name}, Priority: ${button.dataset.priority}, Due Date: ${button.dataset.dueDate}`);
+
   openEditMenu(button);
 }
